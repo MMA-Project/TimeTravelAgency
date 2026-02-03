@@ -136,15 +136,14 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute -bottom-10 left-1/2 -translate-x-1/2"
         >
           <button
             onClick={scrollToDestinations}
-            className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
             aria-label="Scroll to destinations"
           >
-            <span className="text-xs uppercase tracking-widest">Découvrir</span>
-            <ChevronDown className="w-5 h-5 animate-bounce" />
+            <ChevronDown className="w-6 h-6 animate-bounce group-hover:scale-110 transition-transform" />
           </button>
         </motion.div>
       </div>

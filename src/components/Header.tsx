@@ -42,7 +42,11 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <img src={getAssetPath("/logo.svg")} alt="TimeTravel Logo" className="w-10 h-10" />
+            <img
+              src={getAssetPath("/logo.svg")}
+              alt="TimeTravel Logo"
+              className="w-10 h-10"
+            />
             <span className="text-xl font-serif tracking-wide text-foreground hidden sm:inline">
               TimeTravel
             </span>

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Clock } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { getAssetPath } from "@/lib/utils";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +20,6 @@ export function Header() {
     { href: "#destinations", label: "Destinations" },
     { href: "#about", label: "Notre Agence" },
     { href: "#quiz", label: "Quiz" },
-    { href: "#booking", label: "Réserver" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -41,11 +41,9 @@ export function Header() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Clock className="w-5 h-5 text-primary" />
-            </div>
-            <span className="text-xl font-serif tracking-wide text-foreground">
+          <a href="#" className="flex items-center gap-2 group">
+            <img src={getAssetPath("/logo.svg")} alt="TimeTravel Logo" className="w-10 h-10" />
+            <span className="text-xl font-serif tracking-wide text-foreground hidden sm:inline">
               TimeTravel
             </span>
           </a>

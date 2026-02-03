@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { DestinationCard } from "./DestinationCard";
 import { DestinationModal } from "./DestinationModal";
+import { getAssetPath } from "@/lib/utils";
 
 const destinations = [
   {
@@ -10,7 +11,7 @@ const destinations = [
     era: "Belle Époque",
     description:
       "Vivez l'inauguration de la Tour Eiffel lors de l'Exposition Universelle. Rencontrez Gustave Eiffel et découvrez Paris à son apogée culturelle.",
-    image: "/Paris 1889 16_9.png",
+    image: getAssetPath("/Paris 1889 16_9.png"),
     highlights: ["Tour Eiffel", "Exposition Universelle", "Belle Époque"],
     duration: "3-7 jours",
     danger: "low" as const,
@@ -37,7 +38,7 @@ const destinations = [
     era: "-66 millions d'années",
     description:
       "Explorez un monde dominé par les dinosaures. Observez des T-Rex, Tricératops et Ptéranodons dans leur habitat naturel.",
-    image: "/Crétacé 16_9.png",
+    image: getAssetPath("/Crétacé 16_9.png"),
     highlights: ["Dinosaures", "Jungle Primordiale", "Aventure Extrême"],
     duration: "1-3 jours",
     danger: "high" as const,
@@ -65,7 +66,7 @@ const destinations = [
     era: "Renaissance",
     description:
       "Découvrez l'âge d'or de la Renaissance. Rencontrez Léonard de Vinci, Michel-Ange et admirez la création du David.",
-    image: "/Florence 1504 16_9.png",
+    image: getAssetPath("/Florence 1504 16_9.png"),
     highlights: ["Léonard de Vinci", "Michel-Ange", "Art Renaissance"],
     duration: "5-10 jours",
     danger: "medium" as const,

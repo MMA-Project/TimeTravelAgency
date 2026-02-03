@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
+import { getAssetPath } from "@/lib/utils";
 import { ChevronDown, Sparkles } from "lucide-react";
 
 export function Hero() {
@@ -29,7 +30,7 @@ export function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         >
-          <source src="/Montage-Final.mp4" type="video/mp4" />
+          <source src={getAssetPath("/Montage-Final.mp4")} type="video/mp4" />
         </video>
 
         {/* Gradient Overlay */}

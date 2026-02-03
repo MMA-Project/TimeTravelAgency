@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/Button";
+import { getAssetPath } from "@/lib/utils";
 import { ChevronRight, Sparkles, RotateCcw } from "lucide-react";
 
 const questions = [
@@ -93,19 +94,19 @@ const questions = [
 const destinations = {
   paris: {
     name: "Paris - 1889",
-    image: "/Paris 1889 16_9.png",
+    image: getAssetPath("/Paris 1889 16_9.png"),
     description:
       "Votre profil révèle un amateur de l'élégance et de l'effervescence urbaine ! Paris en 1889 est fait pour vous. Assistez à l'inauguration de la Tour Eiffel et plongez dans la Belle Époque, une période d'innovation et de raffinement.",
   },
   florence: {
     name: "Florence - 1504",
-    image: "/Florence 1504 16_9.png",
+    image: getAssetPath("/Florence 1504 16_9.png"),
     description:
       "Votre âme d'artiste vous appelle vers la Renaissance ! Florence en 1504 vous attend avec ses chefs-d'œuvre. Rencontrez Léonard de Vinci et Michel-Ange, et vivez l'apogée de l'art occidental.",
   },
   cretaceous: {
     name: "Période Crétacé",
-    image: "/Crétacé 16_9.png",
+    image: getAssetPath("/Crétacé 16_9.png"),
     description:
       "Aventurier dans l'âme ! Le Crétacé est votre destination. Observez les dinosaures dans leur habitat naturel et vivez l'expérience la plus intense de votre vie dans un monde primordial.",
   },
